@@ -1,0 +1,20 @@
+{{ $defaultCopyright := .Site.Title | printf "%s | Copyright © 2018-2019" }}
+{{ $copyright := default $defaultCopyright .Site.Copyright }}
+<footer class="site-footer border-top bg-dark mt-auto">
+    <div id="footer-bottom" class="container">
+        <div class="footer-bottom row">
+            <div class="site-info col-md-6">
+                <p>{{ $copyright }}</p>
+            </div>
+            <div class="social-media-menu col-md-6 float-right">
+                <ul class="mr-auto">
+                    {{ range .Site.Menus.social }}
+                        <li>
+                            <a target="_blank" href="{{ .URL }}"><i class="fab {{ .Name }}"></i></a>
+                        </li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>

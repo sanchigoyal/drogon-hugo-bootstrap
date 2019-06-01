@@ -1,0 +1,34 @@
+<header class="site-header sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container d-flex justify-content-between">
+      <a
+        class="navbar-brand d-flex align-items-center"
+        href="{{ .Site.BaseURL }}"
+        rel="home"
+      >
+        {{ partial "brand" . }}
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarkey"
+        aria-expanded="true"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="navbarkey">
+        <ul class="navbar-nav mr-auto">
+          {{ $url := .URL }}
+          {{ range $key, $value := .Site.Taxonomies.categories }}
+            {{ $href := $key | printf "%s%s" "/categories/" | printf "%s/" }}
+            <li class="nav-item {{ if eq $url $href }}active{{ end }}">
+                <a class="nav-link" href="/categories/{{ $key }}">{{ replace $key "-" " "| title }}</a>
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

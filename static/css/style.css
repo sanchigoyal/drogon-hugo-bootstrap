@@ -1,0 +1,175 @@
+body {
+  font-family: "Lato", Helvetica, Arial, Verdana, sans-serif;
+  letter-spacing: 0.5px;
+}
+
+/*
+ ******** Header custom style *********
+ */
+header .navbar {
+  padding-bottom: 0.75rem;
+  padding-top: 0.75rem;
+  -webkit-box-shadow: 0 8px 6px -6px #999;
+  -moz-box-shadow: 0 8px 6px -6px #999;
+  box-shadow: 0 8px 6px -6px #999;
+}
+
+.navbar-brand strong {
+  color: royalblue;
+}
+
+.nav-item {
+  margin-right: 0.75rem;
+}
+
+.nav-item a:hover {
+  color: royalblue !important;
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .nav-item.active {
+    border-bottom: 4px solid royalblue;
+    margin-bottom: -12px;
+  }
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1150px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+/********** End of Header Section ***********/
+
+/*
+ ********  Footer custom style *********
+ */
+footer {
+  padding: 0.5rem 0 0.5rem 0;
+  color: white;
+}
+
+footer .site-info {
+  text-align: center;
+  padding: 0.5rem 0 0.5rem 0;
+}
+
+footer .site-info p {
+  margin: 0;
+}
+
+footer .social-media-menu {
+  text-align: center;
+  padding: 0.5rem 0 0.5rem 0;
+}
+
+footer .social-media-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer .social-media-menu ul li {
+  display: inline;
+}
+
+footer .social-media-menu ul li a {
+  margin-left: 10px;
+  margin-right: 10px;
+  transition: all 0.2s ease-in-out;
+  color: white;
+  display: inline;
+  padding: 0;
+}
+
+footer .social-media-menu .fab:hover {
+  transform: scale(1.5);
+}
+
+.footer-bottom {
+  padding: 0.5rem 0 0.5rem 0;
+}
+/********** End of Footer Section ***********/
+
+/**
+******** Card grid styles *******************
+*/
+.card-title a {
+  text-decoration: none !important;
+  color: black;
+  transition: 0.2s;
+}
+.card-title a:visited {
+  color: black;
+}
+.card-title a:hover {
+  color: royalblue;
+}
+.card-body {
+  background-color: #fcfcfc;
+}
+.card-body p {
+  margin-bottom: 0;
+}
+.card-footer a {
+  text-decoration: none !important;
+  color: #6c757d;
+  transition: 0.2s;
+}
+.card-footer a:hover {
+  color: royalblue;
+}
+/* Extra small devices (portrait phones, 575px and below  */
+.card-img-top {
+  width: 100%;
+  height: 45vw;
+  object-fit: cover;
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .card-img-top {
+    width: 100%;
+    height: 30vw;
+    object-fit: cover;
+  }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .card-img-top {
+    width: 100%;
+    height: 20vw;
+    object-fit: cover;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .card-img-top {
+    width: 100%;
+    height: 13vw;
+    object-fit: cover;
+  }
+}
+
+/********** End of Card Grid Style Section ***********/
+
+/********** Pagination Section ***********************/
+.blog-pagination .page-item.active .page-link{
+  background-color: royalblue;
+  color: white
+}
+.blog-pagination .page-link{
+  background-color: white;
+  color: royalblue
+}
+/********** End of Pagination Section ****************/

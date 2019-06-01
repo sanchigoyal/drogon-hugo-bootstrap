@@ -1,0 +1,16 @@
+name = "Drogon Hugo Bootstrap"
+license = "MIT"
+description = "A simple grid based hugo theme using bootstrap"
+homepage = "https://github.com/sanchigoyal/drogon-hugo-bootstrap"
+tags = ["blog", "grid", "bootstrap"]
+features = ["blog", "responsive", "Google Analytics", "bootstrap", "grid"]
+min_version = 0.1
+
+[author]
+  name = "Sanchi Goyal"
+  homepage = "https://github.com/sanchigoyal"
+
+[original]
+  author =  "Sanchi Goyal"
+  homepage = "https://github.com/sanchigoyal/drogon-hugo-bootstrap"
+  repo = "https://github.com/sanchigoyal/drogon-hugo-bootstrap"
