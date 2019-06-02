@@ -1,0 +1,25 @@
+{{ $num_recent_posts := default 5 .Site.Params.sidebar.num_recent_posts }}
+{{ $posts := first $num_recent_posts (where ( where .Site.Pages "Title" "ne" "Posts") "Section" "in" .Site.Params.mainSections) }}
+{{ if gt (len $posts) 0 }}
+<section class="widget recent-posts-widget">
+    <h2 class="widget-heading">
+        <span>Recent Articles</span>
+    </h2>
+    <div class="widget-post-list">
+        {{ range $posts }}
+            <div class="widget-post-item">
+                <a href="{{.RelPermalink}}" class="widget-post-content clearfix">
+                    {{ with .Params.featured_image }}
+                        <div class="widget-post-thumbnail">
+                            <img src="{{ . }}"/>
+                        </div>
+                    {{ end }}
+                    <div href="{{.RelPermalink}}" class="widget-post-info">
+                        {{ .Title | markdownify }}
+                    </div>
+                </a>
+            </div>
+        {{ end }}
+    </div>
+</section>
+{{ end }}

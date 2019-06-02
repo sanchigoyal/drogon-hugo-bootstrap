@@ -1,0 +1,16 @@
+<div class="post-meta-data text-center text-muted">
+    <!-- Author -->
+    {{ $author := .Params.author | default .Site.Params.author }}
+    {{ if $author }}
+        {{ $author }} &nbsp; • &nbsp; 
+    {{ end }}
+    <!-- Category -->
+    {{ if .Params.categories }}
+        <a href="{{ "/categories/" | relLangURL }}{{ index .Params.categories 0 | urlize }}">{{ index .Params.categories 0 }}</a> &nbsp; • &nbsp;
+    {{ end }}
+    <!-- Posted Date -->
+    {{ $dateFormat := default "Jan 2, 2006" (index .Site.Params "date_format") }}
+    {{ if not .Date.IsZero }}
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format $dateFormat }}</time>
+    {{ end }}   
+</div>

@@ -2,10 +2,13 @@ body {
   font-family: "Lato", Helvetica, Arial, Verdana, sans-serif;
   letter-spacing: 0.5px;
 }
-
+a {
+  text-decoration: none !important;
+}
 /*
  ******** Header custom style *********
  */
+
 header .navbar {
   padding-bottom: 0.75rem;
   padding-top: 0.75rem;
@@ -49,11 +52,13 @@ header .navbar {
     max-width: 1400px;
   }
 }
+
 /********** End of Header Section ***********/
 
 /*
  ********  Footer custom style *********
  */
+
 footer {
   padding: 0.5rem 0 0.5rem 0;
   color: white;
@@ -105,36 +110,42 @@ footer .social-media-menu .fab:hover {
 ******** Card grid styles *******************
 */
 .card-title a {
-  text-decoration: none !important;
   color: black;
   transition: 0.2s;
 }
+
 .card-title a:visited {
   color: black;
 }
+
 .card-title a:hover {
   color: royalblue;
 }
+
 .card-body {
   background-color: #fcfcfc;
 }
+
 .card-body p {
   margin-bottom: 0;
 }
+
 .card-footer a {
-  text-decoration: none !important;
   color: #6c757d;
   transition: 0.2s;
 }
+
 .card-footer a:hover {
   color: royalblue;
 }
+
 /* Extra small devices (portrait phones, 575px and below  */
 .card-img-top {
   width: 100%;
   height: 45vw;
   object-fit: cover;
 }
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   .card-img-top {
@@ -143,6 +154,7 @@ footer .social-media-menu .fab:hover {
     object-fit: cover;
   }
 }
+
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .card-img-top {
@@ -164,12 +176,122 @@ footer .social-media-menu .fab:hover {
 /********** End of Card Grid Style Section ***********/
 
 /********** Pagination Section ***********************/
-.blog-pagination .page-item.active .page-link{
+
+.blog-pagination .page-item.active .page-link {
   background-color: royalblue;
-  color: white
+  color: white;
 }
-.blog-pagination .page-link{
+
+.blog-pagination .page-link {
   background-color: white;
+  color: royalblue;
+}
+
+/********** End of Pagination Section ****************/
+
+/********** Breadcrumb Styles ************************/
+
+.breadcrumb {
+  background-color: white;
+  padding-left: 0;
+}
+
+.breadcrumb a {
+  color: black !important;
+}
+
+.breadcrumb a:hover {
+  color: royalblue !important;
+}
+/********** End of Breadcrumb Styles ******************/
+
+/********** Post Style ********************************/
+.post-title {
+  margin-bottom: 1rem;
+  color: royalblue;
+}
+
+.post-meta-data {
+  margin-bottom: 2rem;
+}
+
+.post-meta-data a {
+  color: #6c757d;
+}
+
+.post-meta-data a:hover {
+  color: royalblue;
+}
+
+.post-fimage {
+  margin-bottom: 2rem;
+}
+
+.post-content blockquote {
+  quotes: "" "";
+  margin: 1em 1em;
+  border-left: 5px solid;
+  padding: 10px;
+  position: relative;
+  font-style: italic;
+  font-size: 105%;
+  font-weight: 500;
+}
+
+/********** End of Post Style **************************/
+
+/********** Widget Styles *****************************/
+.widget-area .widget {
+  margin-bottom: 20px;
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #e8e8e8;
+}
+
+.widget-heading {
+  font-size: 19px;
+  border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 10px;
+}
+
+.widget-post-item {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.widget-post-content {
+  display: block;
+}
+
+.widget-post-thumbnail img {
+  display: block;
+  float: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 85px;
+  height: 55px;
+  background-color: #f4f4f4;
+}
+
+.widget-post-info {
+  display: block;
+  float: left;
+  width: calc(100% - 85px);
+  font-size: 14px;
+  padding-left: 10px;
+  cursor: pointer;
+  color: #212529;
+  line-height: 1.6;
+  max-height: 50px;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+}
+
+.widget-post-info:hover {
   color: royalblue
 }
-/********** End of Pagination Section ****************/
+/********** End of Widget Styles **********************/

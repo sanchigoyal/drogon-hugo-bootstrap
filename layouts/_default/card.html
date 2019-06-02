@@ -1,11 +1,7 @@
 <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 pt-4 pb-4">
     <div class="card card-block h-100">
         {{ with .Params.featured_image }}
-        <img
-            src="{{ . }}"
-            class="card-img-top img-fluid"
-            alt="..."
-        />
+            <img src="{{ . }}" class="card-img-top img-fluid" alt="..." />
         {{ end }}
         <div class="card-body">
             <h5 class="card-title">
@@ -16,7 +12,12 @@
             {{ .Summary }}
         </div>
         <div class="card-footer">
-            <small class="text-muted">
+            <div class="text-muted">
+                <!-- Author -->
+                {{ $author := .Params.author | default .Site.Params.author }}
+                {{ if $author }}
+                    {{ $author }} &nbsp; • &nbsp; 
+                {{ end }}
                 <!-- Category -->
                 {{ if .Params.categories }}
                     <a href="{{ "/categories/" | relLangURL }}{{ index .Params.categories 0 | urlize }}">{{ index .Params.categories 0 }}</a> &nbsp; • &nbsp;
@@ -24,14 +25,9 @@
                 <!-- Posted Date -->
                 {{ $dateFormat := default "Jan 2, 2006" (index .Site.Params "date_format") }}
                 {{ if not .Date.IsZero }}
-                    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format $dateFormat }}</time> &nbsp; • &nbsp; 
+                    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format $dateFormat }}</time>
                 {{ end }}
-                <!-- Author -->
-                {{ $author := .Params.author | default .Site.Params.author }}
-                {{ if $author }}
-                    {{ $author }}
-                {{ end }}
-            </small>
+            </div>
         </div>
     </div>
 </div>

@@ -1,29 +1,41 @@
 {{ define "main" }}
 
-<header>
-    {{ partial "post-title" . }}
-    {{ partial "post-date" . }}
-    {{ partial "post-tags" . }}
-    {{ partial "post-categories" . }}
-    <hr>
-</header>
-<article class="blog-post">
-    yayay-single
-    {{ .Content }}
-
-    {{ if .IsTranslated }}
-      <h4>{{ i18n "translations" }}</h4>
-      <ul>
-        {{ range .Translations }}
-        <li>
-          <a href="{{ .RelPermalink }}">{{ .Lang }}: {{ .Title }}</a>
-        </li>
-        {{ end }}
-      </ul>
-    {{ end }}
-
-    {{ partial "related" . }}
-
-</article>
+<div class="container pt-4">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ .Site.BaseURL }}">Home</a></li>
+            <li class="breadcrumb-item">
+                {{ if .Params.categories }}
+                    <a href="{{ "/categories/" | relLangURL }}{{ index .Params.categories 0 | urlize }}">{{ index .Params.categories 0 }}</a>
+                {{ end }}
+            </li>
+            <li class="breadcrumb-item d-none d-lg-block d-md-block active" aria-current="page">
+                {{ .Title | markdownify }}
+            </li>
+        </ol>
+    </nav>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+            <!-- Post -->
+            <article class="post">
+                {{ partial "post-title" . }}
+                {{ partial "post-meta-data" . }}
+                {{ partial "post-fimage" . }}
+                {{ partial "post-content" . }}
+                {{ partial "post-tags" . }}
+            </article>
+            <!-- TODO: Post Navigation -->
+            <!-- TODO: Related Posts -->  
+        </div>
+        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+            <div class="widget-area">
+                {{ partial "recent-posts-widget" . }}
+                {{ partial "related-post-widget" . }}
+            </div>
+        </div>
+    </div>
+</div>
 
 {{ end }}

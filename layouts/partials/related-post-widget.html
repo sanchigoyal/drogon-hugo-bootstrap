@@ -1,0 +1,24 @@
+{{ $related := .Site.RegularPages.Related . | first 5 }}
+{{ with $related }}
+<section class="widget related-posts-widget">
+    <h2 class="widget-heading">
+        <span>Related Articles</span>
+    </h2> 
+    <div class="widget-post-list">
+        {{ range . }}
+            <div class="widget-post-item">
+                <a href="{{.RelPermalink}}" class="widget-post-content clearfix">
+                    {{ with .Params.featured_image }}
+                        <div class="widget-post-thumbnail">
+                            <img src="{{ . }}"/>
+                        </div>
+                    {{ end }}
+                    <div href="{{.RelPermalink}}" class="widget-post-info">
+                        {{ .Title | markdownify }}
+                    </div>
+                </a>
+            </div>
+        {{ end }}
+    </div>
+</section>
+{{ end }}

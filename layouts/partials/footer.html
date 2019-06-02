@@ -1,5 +1,11 @@
 {{ $defaultCopyright := .Site.Title | printf "%s | Copyright © 2018-2019" }}
 {{ $copyright := default $defaultCopyright .Site.Copyright }}
+
+<!-- Return to top icon -->
+<a href="javascript:" id="return-to-top">
+    <i class="fas fa-chevron-up"></i>
+</a>
+
 <footer class="site-footer border-top bg-dark mt-auto">
     <div id="footer-bottom" class="container">
         <div class="footer-bottom row">

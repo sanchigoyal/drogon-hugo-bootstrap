@@ -1,12 +1,14 @@
 {{ define "main" }}
+
 <div class="container">
     <div class="row">
-        {{ $paginator := .Paginate (where .Pages "Type" "post") }}
-        {{ range $paginator.Pages }}
+        {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
+        {{ range $paginator.Pages.ByDate.Reverse }}
             {{ .Render "card" }}
         {{ end }}
     </div>
 {{ partial "paginator" . }}
 </div>
+
 {{ end }}
 
