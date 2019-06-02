@@ -5,6 +5,11 @@ body {
 a {
   text-decoration: none !important;
 }
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 /*
  ******** Header custom style *********
  */
