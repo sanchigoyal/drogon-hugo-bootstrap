@@ -7,7 +7,11 @@
 
     <title>
       {{ block "title" . }}
-        {{ .Title}}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}
+        {{ if ne .Title .Site.Title }}
+          {{ .Title}} | {{ .Site.Title }}
+        {{ else }}
+          {{ .Title }} | {{ .Site.Params.tagline }}
+        {{ end }}
       {{ end }}
     </title>
 
@@ -20,7 +24,7 @@
     
     <!-- Allow to inject custom head links-->
     {{ partial "head-custom" . }}
-    
+
     {{ template "_internal/google_analytics_async.html" . }}
   </head>
   <body class="d-flex flex-column h-100">
