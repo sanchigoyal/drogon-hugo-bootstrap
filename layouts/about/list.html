@@ -1,0 +1,45 @@
+{{ define "main" }}
+
+<div class="jumbotron-bg-cover text-center jumbotron jumbotron-fluid bg-light">
+  <div class="container-fluid">
+    <img
+      alt="ilustration"
+      width="150"
+      height="150"  
+      src="{{ .Params.Image }}"
+    />
+    <h1 class="jumbotron-heading mt-2 mb-1">{{ .Site.Title }}</h1>
+    <h4 class="lead mb-1">{{ .Site.Params.tagline }}</h4>
+    <p class="text-mute">{{ .Site.Params.description }}</p>
+  </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">Our Authors</h1>
+        </div>
+        {{ range .Site.Data.author.member }}
+        <div class="col-md-6">
+            <div class="author-card card text-center pt-4">
+                <img src="{{ .image | absURL }}" class="card-img-top center-block" width="80%"/>
+                <div class="card-body pb-2">
+                    <h4 class="card-title mb-1">{{.title }}</h4>
+                    <p class="mb-1">{{.designation }}</p>
+                    <p class="mb-1">{{ .company }}</p>
+                </div>
+                <div class="card-footer">
+                    <ul>
+                        {{ range .social }}
+                            <li>
+                                <a target="_blank" href="{{ .url }}"><i class="fab {{ .name }} fa-2x"></i></a>
+                            </li>
+                        {{ end }}
+                    </ul>   
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</div>
+
+{{ end }}

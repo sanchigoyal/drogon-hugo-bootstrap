@@ -27,6 +27,9 @@
                 <a class="nav-link" href="/categories/{{ $key }}">{{ replace $key "-" " "| title }}</a>
             </li>
           {{ end }}
+            <li class="nav-item {{ if eq $url "/about/" }}active{{ end }}">
+              <a class="nav-link" href="/about">About</a>
+            </li>
         </ul>
       </div>
     </div>

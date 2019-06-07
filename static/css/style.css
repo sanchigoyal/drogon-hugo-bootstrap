@@ -114,38 +114,38 @@ footer .social-media-menu .fab:hover {
 /**
 ******** Card grid styles *******************
 */
-.card-title a {
+.drogon-card .card-title a {
   color: black;
   transition: 0.2s;
 }
 
-.card-title a:visited {
+.drogon-card .card-title a:visited {
   color: black;
 }
 
-.card-title a:hover {
+.drogon-card .card-title a:hover {
   color: royalblue;
 }
 
-.card-body {
+.drogon-card .card-body {
   background-color: #fcfcfc;
 }
 
-.card-body p {
+.drogon-card .card-body p {
   margin-bottom: 0;
 }
 
-.card-footer a {
+.drogon-card .card-footer a {
   color: #6c757d;
   transition: 0.2s;
 }
 
-.card-footer a:hover {
+.drogon-card .card-footer a:hover {
   color: royalblue;
 }
 
 /* Extra small devices (portrait phones, 575px and below  */
-.card-img-top {
+.drogon-card .card-img-top {
   width: 100%;
   height: 45vw;
   object-fit: cover;
@@ -153,7 +153,7 @@ footer .social-media-menu .fab:hover {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-  .card-img-top {
+  .drogon-card .card-img-top {
     width: 100%;
     height: 30vw;
     object-fit: cover;
@@ -162,7 +162,7 @@ footer .social-media-menu .fab:hover {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .card-img-top {
+  .drogon-card .card-img-top {
     width: 100%;
     height: 20vw;
     object-fit: cover;
@@ -171,7 +171,7 @@ footer .social-media-menu .fab:hover {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  .card-img-top {
+  .drogon-card .card-img-top {
     width: 100%;
     height: 13vw;
     object-fit: cover;
@@ -299,3 +299,39 @@ footer .social-media-menu .fab:hover {
   color: royalblue
 }
 /********** End of Widget Styles **********************/
+
+/********** Jumbotron Style ***************************/
+.jumbotron-bg-cover {
+  background-image: url("/images/jumbotron-bg.png");
+}
+/********** End of Jumbotron Style ********************/
+.author-card {
+  border: none;
+}
+
+.author-card .card-img-top {
+  width: 300px;
+  height: 300px;
+}
+
+.author-card .card-footer {
+  background-color: white;
+  border: none;
+  padding-top: 0;
+}
+.author-card .card-footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.author-card .card-footer ul li {
+  display: inline;
+}
+
+.author-card .card-footer ul li a {
+  margin-left: 10px;
+  margin-right: 10px;
+  display: inline;
+  padding: 0;
+}
